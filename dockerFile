@@ -1,0 +1,6 @@
+FROM alpine:latest as builder
+LABEL Author="jdc"
+
+USER root
+
+RUN apk update && apk add --no-cache curl jq tar openjdk21 maven xmlstarlet
